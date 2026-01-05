@@ -2,20 +2,22 @@ const params = new URLSearchParams(location.search);
 const testName = params.get("test");
 
 if (!testName) {
-  alert("No test selected");
-  location.href = "index.html";
+  alert("No test specified");
+  throw new Error("Missing test parameter");
 }
 
 fetch(`tests/${testName}/test.json`)
-  .then(r => r.json())
+  .then(r => {
+    if (!r.ok) throw new Error("Test failed to load");
+    return r.json();
+  })
   .then(data => {
-    document.title = `${data.title} — ${data.code}`;
-    document.getElementById("testTitle").textContent = data.title;
-    document.getElementById("startTitle").textContent = data.title;
     data.basePath = `tests/${testName}/`;
     window.TEST_DATA = data;
+    document.title = data.title;
+    document.getElementById("testTitle").textContent = data.title;
   })
-  .catch(() => {
+  .catch(err => {
     alert("Test failed to load");
-    location.href = "index.html";
+    console.error(err);
   });
