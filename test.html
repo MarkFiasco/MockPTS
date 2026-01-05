@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Loading test…</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+<div class="wrap">
+
+<header>
+  <h1 id="testTitle">Loading…</h1>
+  <div class="meta">Multiple Choice • Use keys 1–6</div>
+</header>
+
+<div id="startScreen" class="card">
+  <h2 id="startTitle"></h2>
+  <button id="startBtn">Start Test</button>
+</div>
+
+<main id="app" class="card" style="display:none">
+  <div id="questionArea"></div>
+
+  <div class="controls">
+    <button id="prevBtn" class="ghost">← Previous</button>
+    <button id="nextBtn">Submit & Next →</button>
+  </div>
+
+  <div class="footer">
+    Time: <span id="timer">00:00</span>
+    <button id="resetBtn" class="ghost">Reset</button>
+  </div>
+
+  <div id="results"></div>
+</main>
+
+</div>
+
+<script src="assets/js/loader.js"></script>
+<script src="assets/js/engine.js"></script>
+</body>
+</html>
