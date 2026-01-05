@@ -1,27 +1,15 @@
 {
   "title": "Mock Rail PTS Exam",
-  "code": "PTS-01",
   "questions": [
     {
-      "q": "What is the purpose of PTS?",
+      "q": "What is the primary purpose of PTS?",
       "choices": [
         "Reduce ticket prices",
         "Ensure safe working on or near the railway",
-        "Control signals",
-        "Manage passengers"
+        "Schedule trains",
+        "Monitor passengers"
       ],
       "answer": 1,
-      "explanation": "PTS protects track workers."
-    },
-    {
-      "q": "Before entering the track, what must you do?",
-      "choices": [
-        "Get permission and follow instructions",
-        "Step on quickly",
-        "Turn off signals",
-        "Call station staff"
-      ],
-      "answer": 0,
       "image": "images/rail.webp"
     }
   ]
