@@ -3,7 +3,7 @@ const testName = params.get("test");
 
 if (!testName) {
   alert("No test specified");
-  throw new Error("Missing test parameter");
+  throw new Error("Missing test param");
 }
 
 fetch(`tests/${testName}/test.json`)
